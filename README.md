@@ -1,49 +1,20 @@
-# Starlight Starter Kit: Basics
+# Git Good: Version Control for the Rest of Us
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+A plain-language, jargon-free guide to Git and GitHub written specifically
+for students with no computer science background.
 
-```
-bun create astro@latest -- --template starlight
-```
+Most Git tutorials assume you're a developer. This one doesn't.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## About
 
-## 🚀 Project Structure
+Git Good covers everything a non-CS student needs to get started with version control - without the intimidating jargon or assumptions about prior technical knowledge. Topics include why version control matters, core concepts explained through analogy, a step-by-step setup guide, the basic day-to-day workflow, and solutions to common beginner mistakes.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## View the Site
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+<!-- This is a placeholder -->
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+[git-good.github.io](#)
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+---
 
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+_Created as a technical writing project for ENGL235 at Skagit Valley College._

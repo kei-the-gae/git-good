@@ -1,40 +1,53 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Git Good
+head:
+    - tag: title
+      content: Git Good
+description: Version control for the rest of us.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    tagline: Version Control for the Rest of Us
+    actions:
+        - text: Get Started
+          link: /why-version-control
+          icon: right-arrow
+        - text: Jump to Setup
+          link: /getting-started
+          icon: rocket
+          variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-
-## Next steps
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+    <LinkCard
+        title="📖 Why Version Control?"
+        href="/why-version-control"
+        description="Learn why version control matters and how it benefits your workflow."
+    />
+    <LinkCard
+        title="💡 Core Concepts"
+        href="/core-concepts"
+        description="Understand the essential ideas behind version control systems."
+    />
+    <LinkCard
+        title="🚀 Getting Started"
+        href="/getting-started"
+        description="Set up your environment and take your first steps with Git."
+    />
+    <LinkCard
+        title="⚙️ Basic Workflow"
+        href="/basic-workflow"
+        description="Follow the typical steps for day-to-day version control."
+    />
+    <LinkCard
+        title="🛠️ Common Mistakes & Fixes"
+        href="/common-mistakes"
+        description="Avoid and recover from frequent pitfalls."
+    />
+    <LinkCard
+        title="🔍 Glossary"
+        href="/glossary"
+        description="Look up key terms and concepts."
+    />
 </CardGrid>
