@@ -1,0 +1,68 @@
+---
+title: Command Line Primer
+description: A basic introduction to navigating your computer using text commands.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+## Navigating folders with text
+
+Because Git operates entirely through text commands, you need to know how to move from folder to folder on your computer without using your mouse. Think of the command line like an old-school text adventure game where you have to type where you want to go.
+
+When you first open your command line program, you are standing in your computer's primary home user folder.
+
+### See what is inside your current folder
+
+To look around and see a text list of all files and sub-folders available where you are currently standing, type this command and press **Enter**:
+
+```bash
+$ ls
+```
+
+<Aside title="Note">Do not type the $ symbol at the beginning.</Aside>
+
+<Aside type="tip" title="Expected response">
+The computer will print a plain list of everything in your current folder:
+
+```text
+Desktop Documents Downloads Pictures
+```
+
+</Aside>
+
+### Move into a sub-folder
+
+To move yourself inside one of those sub-folders (like your Documents folder), you will use a new command.
+
+Type this command and press **Enter**:
+
+```bash
+$ cd <your-target-folder>
+```
+
+<Aside title="Note">
+    Do not type the $ symbol at the beginning. Replace _\<your-target-folder>_ with the exact name of the folder you want to enter, for example: `cd Documents`.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+    Your command line prompt will update to show you have entered the folder you
+    specified.
+</Aside>
+
+### Move back up one level
+
+If you enter the wrong folder or want to go backward to the parent folder you just came from, type this command and press **Enter**:
+
+```bash
+$ cd ..
+```
+
+<Aside title="Note">
+    Do not type the $ symbol at the beginning. Make sure to type a space between
+    the word `cd` and the two periods.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+    Your command line prompt will update to show you have stepped back out to
+    your previous folder location.
+</Aside>
