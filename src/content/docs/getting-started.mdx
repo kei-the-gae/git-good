@@ -1,0 +1,164 @@
+---
+title: Getting Started
+description: A guide in my new Starlight docs site.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+{/* TODO: Add graphics in here */}
+
+## Creating your GitHub account
+
+Before you can store your project folders online, you need a place to put them. Creating an account on the GitHub website is completely free and only takes a few moments.
+
+### Choose your username carefully
+
+Open your web browser and navigate to the GitHub website. Click the **Sign up** button in the top-right corner of the screen.
+The website will guide you through entering your email address and creating a strong password. It will also ask you to choose a username.
+
+<Aside type="tip" title="A quick tip on usernames">
+    Because your project folders will be hosted under this account name, treat
+    your username like a professional email address or a LinkedIn profile
+    handle. Future employers or professors might look at your work here, so
+    choose a name that is professional and easy to read (like combining your
+    first initial and last name).
+</Aside>
+
+### Verify your account and email
+
+To protect the site from automated bots, the website will show you a quick visual puzzle to solve. Click the buttons to complete the puzzle, then click the **Create account** button.
+
+Check your email inbox for a "launch code" sent by the website. Type that numeric code into the boxes on your screen to officially activate your account.
+
+### Congratulations!
+
+Your online account dashboard is ready to go, and you are officially set up to start linking your local computer to your new online home for projects.
+
+## Installing Git
+
+To start using version control on your local computer, you need to install the Git software engine.
+
+- For Windows users: Head to the official Git website, download the installer, and run it. You can safely click **Next** through all the default options.
+- For Mac users: Open your built-in command line program (search your computer for **Terminal** to open it), type `git`, and press **Enter**. If you do not have Git installed, your Mac will automatically pop up a box asking if you would like to install the Xcode Command Line Tools. Click **Install** to proceed.
+
+## Introducing yourself to Git
+
+Before you can start saving snapshots of your project folder, you must introduce yourself to Git. This ensures that your history log accurately records your name next to the work you do.
+
+Open your command line, type the following command (replacing the placeholder with your actual name), and press **Enter**:
+
+```bash
+$ git config --global user.name "<your-name>"
+```
+
+<Aside title="Note">
+    Do not type the $ symbol. Replace _\<your-name>_ with your actual name inside the quotation marks, for example: `git config --global user.name "Kei Holland"`. Another acceptable option is the username you chose when you created your GitHub account.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+    The command line will return to a new, blank command line prompt without
+    displaying an error. This means Git has successfully remembered your
+    information.
+</Aside>
+
+Next, give Git your email address by typing this command and pressing **Enter**:
+
+```bash
+$ git config --global user.email "<your-email>"
+```
+
+<Aside title="Note">
+    Do not type the $ symbol. Replace _\<your-email>_ with the exact same email address you plan to use for your GitHub account inside the quotation marks, for example: `git config --global user.email "keiholland@gmail.com"`.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+    The command line will return to a new, blank command line prompt without
+    displaying an error. This means Git has successfully remembered your
+    information.
+</Aside>
+
+## Linking Git to your GitHub account
+
+To send your local project snapshots up to your online backup on the GitHub website, the Git software on your computer needs secure permission to talk to your online account.
+
+To securely connect your computer to your online account, GitHub uses a specialized security key called a **Personal Access Token** instead of your standard password. Think of it as a temporary digital valet key that safely grants your terminal permission to update your online project folders.
+
+<Aside type="danger" title="Security Alert">
+    According to official GitHub Documentation, standard passwords are no longer
+    accepted via the command line to prevent credential leaks. **Personal Access
+    Tokens** act as secure, revocable keys.
+</Aside>
+
+### Generate your security token
+
+Sign in to the GitHub website, click on your profile picture in the top-right corner, and select **Settings**.
+
+On the left sidebar, scroll all the way to the bottom and click **Developer settings**.
+
+Next, click **Personal access tokens** on the left menu, and choose **Tokens (classic)**.
+
+### Configure token settings
+
+Click the **Generate new token** drop-down menu on the right side of the screen, and select **Generate new token (classic)**.
+
+In the **Note** box, give your token a descriptive name that helps you remember what computer it belongs to (for example: _"My School Laptop"_).
+
+Under the **Select scopes** section, look for the option labeled **repo** and check its box. This gives your computer permission to upload your project folders.
+
+Scroll down to the very bottom of the page and click the green **Generate token** button.
+
+### Copy and save your token
+
+<Aside type="caution" title="Important Note">
+    The GitHub website will now display a long string of letters and numbers.
+    This text block is your temporary access password. Copy it immediately and
+    save it somewhere safe. The website will never show it to you again.
+</Aside>
+
+The first time you try to push a project online later in this guide, your computer will ask you for your password. When that happens, you will paste this token text block in instead of your regular account password.
+
+<Aside type="caution" title="Important Note">
+    When you paste your **Personal Access Token** into the command line, no
+    text, stars, or dots will appear on the screen. The command line hides your
+    input completely to protect your password. Do not panic – just paste the
+    token once and press **Enter**.
+</Aside>
+
+## Creating your first online project folder
+
+Now that your account is active and your security token is saved, you need to create a home for your project files on the GitHub website.
+
+### Create the project folder online
+
+Look at the top-right corner of your GitHub dashboard page, click the **+** (plus sign) icon, and select **New repository**. Remember, "repository" is just technical jargon for a project folder!
+
+In the box labeled **Repository name**, type a simple, short name for your project (for example: _my-first-project_).
+
+Leave the setting marked as **Public** so your instructor or peers can see your hard work later, and leave all the checkboxes at the bottom (like adding a README file) unchecked for now. Click the green **Create repository** button at the bottom of the page.
+
+### Copy your project link
+
+Your screen will refresh to show a setup page. Look near the top of the page for a web address link (it will look something like `https://github.com/your-username/my-first-project.git`).
+
+Click the small clipboard icon next to this link to copy it to your computer's clipboard.
+
+### Download the online folder to your computer
+
+To pull this online folder down to your local machine so you can start working on it, open your command line. Next, navigate to the folder where you want your project to live. If you don't remember how to change folders using text, check out the [Command line primer] page. Type this command and press **Enter**:
+
+```bash
+$ git clone <your-github-url>
+```
+
+<Aside title="Note">
+    Do not type the $ symbol at the beginning. Replace _\<your-github-url>_ with the exact link you just copied from the GitHub website.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+    The computer will print a few lines of text showing the download progress, ending with a message like this:
+    
+    ```bash
+    > Cloning into 'my-first-project'...
+    > Receiving objects: 100% (3/3), done.
+    ```
+</Aside>
