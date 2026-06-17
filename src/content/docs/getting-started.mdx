@@ -5,8 +5,6 @@ description: A step by step guide to installing and configuring Git and GitHub.
 
 import { Aside } from "@astrojs/starlight/components";
 
-{/* TODO: Add graphics in here */}
-
 ## Creating your GitHub account
 
 Before you can store your project folders online, you need a place to put them. Creating an account on the GitHub website is completely free and only takes a few moments.
@@ -81,7 +79,7 @@ $ git config --global user.email "<your-email>"
 
 To send your local project snapshots up to your online backup on the GitHub website, the Git software on your computer needs secure permission to talk to your online account.
 
-To securely connect your computer to your online account, GitHub uses a specialized security key called a **Personal Access Token** instead of your standard password. Think of it as a temporary digital valet key that safely grants your terminal permission to update your online project folders.
+To securely connect your computer to your online account, GitHub uses a specialized security key called a **Personal Access Token** instead of your standard password. Think of it as a temporary digital valet key that safely grants your command line permission to update your online project folders.
 
 <Aside type="danger" title="Security Alert">
     According to [official GitHub
@@ -96,6 +94,8 @@ Sign in to the GitHub website, click on your profile picture in the top-right co
 
 On the left sidebar, scroll all the way to the bottom and click **Developer settings**.
 
+![Screenshot of the main GitHub Account Settings page, showing the long vertical menu on the left side scrolled all the way to the bottom. A prominent highlight box outlines the 'Developer settings' option, which is the final item in the sidebar menu configuration.](./src/assets/dev-settings.png)
+
 Next, click **Personal access tokens** on the left menu, and choose **Tokens (classic)**.
 
 ### Configure token settings
@@ -104,25 +104,38 @@ Click the **Generate new token** drop-down menu on the right side of the screen,
 
 In the **Note** box, give your token a descriptive name that helps you remember what computer it belongs to (for example: _"My School Laptop"_).
 
+<Aside type="caution" title="The expiration date">
+    By default, tokens expire after 30 days. After that expiration date, you
+    will need to generate a new token and sign in to GitHub again to continue
+    using GitHub with Git. You can change this by selecting a different option
+    from the **Expiration** dropdown list. If you want a set it and forget it
+    token, select the **No expiration** option.
+</Aside>
+
 Under the **Select scopes** section, look for the option labeled **repo** and check its box. This gives your computer permission to upload your project folders.
+
+![Screenshot of the 'New personal access token (classic)' form on GitHub. The top text field includes 'Give it a descriptive name' in the Note box, and a red box highlights the 'repo' checkbox under the Select Scopes list, showing it is explicitly checked to grant repository write permissions.](./src/assets/token.png)
 
 Scroll down to the very bottom of the page and click the green **Generate token** button.
 
 ### Copy and save your token
 
-<Aside type="caution" title="Important Note">
+<Aside type="danger" title="Wait!">
     The GitHub website will now display a long string of letters and numbers.
-    This text block is your temporary access password. Copy it immediately and
+    This text block is your **Personal Access Token**. Copy it immediately and
     save it somewhere safe. The website will never show it to you again.
+
+    If you lose this token, you will need to generate a new one from the GitHub website.
+
 </Aside>
 
 The first time you try to push a project online later in this guide, your computer will ask you for your password. When that happens, you will paste this token text block in instead of your regular account password.
 
-<Aside type="caution" title="Important Note">
-    When you paste your **Personal Access Token** into the command line, no
-    text, stars, or dots will appear on the screen. The command line hides your
-    input completely to protect your password. Do not panic – just paste the
-    token once and press **Enter**.
+<Aside type="caution" title="Pasting your token">
+    When you paste your **Personal Access Token** into the command line, it's
+    very likely no text, stars, or dots will appear on the screen. The command
+    line hides your input completely to protect your token. Do not panic – just
+    paste the token once and press **Enter**.
 </Aside>
 
 ## Creating your first online project folder
@@ -143,9 +156,11 @@ Your screen will refresh to show a setup page. Look near the top of the page for
 
 Click the small clipboard icon next to this link to copy it to your computer's clipboard.
 
+![Screenshot of the GitHub repository Quick Setup landing page interface. Near the top of the screen, the HTTPS web address link for 'git-good.git' is visible within a horizontal text bar, with a red arrow drawing attention to the adjacent small square clipboard copy button.](./src/assets/quickstart.png)
+
 ### Download the online folder to your computer
 
-To pull this online folder down to your local machine so you can start working on it, open your command line. Next, navigate to the folder where you want your project to live. If you don't remember how to change folders using text, check out the [Command line primer] page. Type this command and press **Enter**:
+To pull this online folder down to your local machine so you can start working on it, open your command line. Next, navigate to the folder where you want your project to live. If you don't remember how to change folders using text, check out the [Command line primer](/command-line-primer/) page. Type this command and press **Enter**:
 
 ```bash
 $ git clone <your-github-url>
