@@ -1,0 +1,80 @@
+---
+title: Common Mistakes & Fixes
+description: A list of common mistakes and how to fix them.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+If you feel overwhelmed by errors, you are not alone. A comprehensive study published by the _Association for Computing Machinery (ACM)_ found that even professional software creators frequently misuse commands like `git commit` or get stuck in terminal loops. This section addresses those exact common friction points.
+
+## Fixing a typo in your last commit message
+
+It happens to everyone - you press **Enter** on a commit command, only to notice a glaring spelling error in your descriptive message. Do not panic. If you have not run the push command yet, you can easily rewrite that message.
+
+Type this command and press **Enter**:
+
+```bash
+$ git commit --amend -m "<your-corrected-message>"
+```
+
+<Aside title="Note">
+Do not type the $ symbol at the beginning. Replace _\<your-corrected-message>_ with your newly polished text inside the quotation marks.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+Your command line will output a brief success message showing your updated text block:
+
+```text
+> [main 4b7c2a1] added the corrected introduction section
+```
+
+</Aside>
+
+## Unstaging a file you accidentally added
+
+If you type `git add` and accidentally include a private file or an unrelated document into your packing box, you do not have to commit it. You can safely unpack that specific file from your packing box without deleting it from your computer.
+
+Type this command and press **Enter**:
+
+```bash
+$ git restore --staged <your-file-name>
+```
+
+<Aside title="Note">
+Do not type the $ symbol at the beginning. Replace _\<your-file-name>_ with the exact name of the file you want to pull out of your packing box, for example: `git restore --staged notes.docx`.
+</Aside>
+
+<Aside type="tip" title="Expected response">
+The command line will return to a clean prompt line without error text.
+
+```bash
+$
+```
+
+If you run your status check command afterward, you will see your file name has safely turned from green text back to red text.
+
+</Aside>
+
+## Getting stuck in a blank screen after running a commit
+
+If you accidentally press **Enter** on a commit command without including the short message text block (the `-m` part of the command), your command line will suddenly wipe your screen and trap you inside an old-school command-line text editor called Vim.
+
+The normal mouse controls will stop working, and typing regular words will only result in error beeps, erratic text formatting, or no response at all. Do not panic – your command line isn't broken, it is just waiting for you to type an exit code.
+
+To safely escape the trapped screen and return to your regular prompt, perform the following physical keystrokes:
+
+1. Press the **Esc** key on your keyboard once to make sure you are out of "typing" mode.
+2. Type a colon symbol by holding Shift and pressing the semicolon key (**:**).
+3. Type the lowercase letter **q** and exclamation point (**!**) together.
+4. Press **Enter**.
+
+Your command line will instantly return to your familiar home screen, allowing you to re-type your commit command correctly with your descriptive message included.
+
+<Aside type="tip" title="Expected response">
+Your command line will drop back down to a clean prompt line:
+
+```bash
+$
+```
+
+</Aside>
