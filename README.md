@@ -11,9 +11,7 @@ Git Good covers everything a non-CS student needs to get started with version co
 
 ## View the Site
 
-<!-- This is a placeholder -->
-
-[git-good.github.io](#)
+https://kei-the-gae.github.io/git-good/
 
 ---
 
