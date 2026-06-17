@@ -25,6 +25,17 @@ export default defineConfig({
                         media: "(prefers-color-scheme: dark)",
                     },
                 },
+                {
+                    tag: "script",
+                    content: `
+                            document.addEventListener('DOMContentLoaded', () => {
+                              document.querySelectorAll('a[href^="http"]').forEach(link => {
+                                link.setAttribute('target', '_blank');
+                                link.setAttribute('rel', 'noopener noreferrer');
+                              });
+                            });
+                          `,
+                },
             ],
             social: [
                 {
