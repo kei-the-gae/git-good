@@ -4,6 +4,8 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://kei-the-gae.github.io",
+    base: "/git-good",
     integrations: [
         starlight({
             title: "Git Good",
